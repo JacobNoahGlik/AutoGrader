@@ -20,7 +20,7 @@ class Auto_Grader_AI:
         return ai.response(self._combiner(prompt, self.rubric))
 
     @staticmethod
-    def combiner(prompt: str, rubric: str, prefix: str = 'You are a grader who\'s job is to grade applications using the following rubric (labeled *RUBRIC*) grade the following submission (labeled *SUBMISSION*)\n') -> str:
+    def combiner(prompt: str, rubric: str, prefix: str = 'You are a grader who\'s job is to grade applications using the following rubric (labeled *RUBRIC*) to grade the following submission (labeled *SUBMISSION*)\n') -> str:
         tripple_quote = '"""'
         return f'{prefix}\n' \
                f'*RUBRIC*\n{tripple_quote}\n{prompt}\n{tripple_quote}\n\n'\
